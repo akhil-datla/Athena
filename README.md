@@ -1,5 +1,5 @@
 # Athena
-Athena is the Q&A search engine built for your own FAQs and answers. This means that Athena uses your existing question and answer database and enables search queries on the questions. Athena ranks queries against the questions using Levenshtein distance. When running Athena, you will need to pass an argument for your CSV file that contains the questions and answers. The CSV file should be formatted as `question,answer`: 
+Athena is the Q&A search engine built for your own FAQs and answers. This means that Athena uses your existing question and answer database and enables fuzzy search queries on the questions. Athena ranks queries against the questions using Levenshtein distance. When running Athena, you will need to pass an argument for your CSV file that contains the questions and answers. The CSV file should be formatted as `question,answer`: 
 
 ```
 Who made Athena?,Akhil Datla
