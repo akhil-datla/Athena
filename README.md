@@ -6,4 +6,4 @@ Who made Athena?,Akhil Datla
 What language is Athena made in?,Go
 ```
 Screenshot of Athena's Search API:
-<img width="903" alt="Screen Shot 2022-05-14 at 4 09 13 PM" src="https://user-images.githubusercontent.com/66145155/168450857-cf086f0e-65b6-4a63-83cc-64ee5b741b6f.png">
+<img width="859" alt="Screen Shot 2022-05-14 at 4 21 12 PM" src="https://user-images.githubusercontent.com/66145155/168451072-9d38c4dc-9e83-4153-aa02-82f81a3aa30d.png">

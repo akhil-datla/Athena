@@ -13,7 +13,7 @@ func main() {
 
 	// Parse the command line arguments
 	if len(os.Args) < 2 {
-		pterm.Error.Println("Please provide the csv file with the question and answers as an argument")
+		pterm.Error.Println("Please provide the CSV file with the question and answers as an argument")
 		os.Exit(1)
 	}
 	csvFileArg := os.Args[1]
