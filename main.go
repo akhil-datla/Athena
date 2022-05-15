@@ -23,12 +23,11 @@ func main() {
 
 	// Parse the port number
 	portPtr := flag.Int("port", 8080, "port to listen on")
-
-	//Start the server on the specified port
-	server.StartServer(*portPtr)
-
+	
 	//Print the banner
 	pterm.DefaultCenter.Println(pterm.DefaultHeader.WithFullWidth().WithBackgroundStyle(pterm.NewStyle(pterm.BgLightRed)).WithMargin(10).Sprint("Athena: The Intelligent Q&A Search Engine"))
 	pterm.Info.Println("(c)2022 by Akhil Datla")
 
+	//Start the server on the specified port
+	server.StartServer(*portPtr)
 }
