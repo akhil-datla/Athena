@@ -28,7 +28,7 @@ func main() {
 	server.StartServer(*portPtr)
 
 	//Print the banner
-	pterm.DefaultCenter.Println(pterm.DefaultHeader.WithFullWidth().WithBackgroundStyle(pterm.NewStyle(pterm.BgLightRed)).WithMargin(10).Sprint("Athena: The Intelligent Question and Answer Search Engine"))
+	pterm.DefaultCenter.Println(pterm.DefaultHeader.WithFullWidth().WithBackgroundStyle(pterm.NewStyle(pterm.BgLightRed)).WithMargin(10).Sprint("Athena: The Intelligent Q&A Search Engine"))
 	pterm.Info.Println("(c)2022 by Akhil Datla")
 
 }
