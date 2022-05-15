@@ -21,7 +21,7 @@ func StartServer(port int) {
 
 //InitializeRoutes initializes the routes
 func InitializeRoutes() {
-	e.POST("/search", func(c echo.Context) error {
+	e.GET("/search", func(c echo.Context) error {
 		query := c.QueryParam("query")
 		results := backend.GetQuestionsAndAnswers(backend.RankedQuerySearch(query))
 		return c.JSON(200, results)
