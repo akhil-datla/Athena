@@ -117,7 +117,7 @@ func (c *Client) updateRegRFC(ctx context.Context, a *Account) (*Account, error)
 	return responseAccount(res)
 }
 
-// getGegRFC is equivalent to c.GetReg but for CAs implementing RFC 8555.
+// getRegRFC is equivalent to c.GetReg but for CAs implementing RFC 8555.
 // It expects c.Discover to have already been called.
 func (c *Client) getRegRFC(ctx context.Context) (*Account, error) {
 	req := json.RawMessage(`{"onlyReturnExisting": true}`)
@@ -232,7 +232,7 @@ func (c *Client) AuthorizeOrder(ctx context.Context, id []AuthzID, opt ...OrderO
 	return responseOrder(res)
 }
 
-// GetOrder retrives an order identified by the given URL.
+// GetOrder retrieves an order identified by the given URL.
 // For orders created with AuthorizeOrder, the url value is Order.URI.
 //
 // If a caller needs to poll an order until its status is final,
@@ -272,7 +272,7 @@ func (c *Client) WaitOrder(ctx context.Context, url string) (*Order, error) {
 		case err != nil:
 			// Skip and retry.
 		case o.Status == StatusInvalid:
-			return nil, &OrderError{OrderURL: o.URI, Status: o.Status}
+			return nil, &OrderError{OrderURL: o.URI, Status: o.Status, Problem: o.Error}
 		case o.Status == StatusReady || o.Status == StatusValid:
 			return o, nil
 		}
@@ -369,7 +369,7 @@ func (c *Client) CreateOrderCert(ctx context.Context, url string, csr []byte, bu
 	}
 	// The only acceptable status post finalize and WaitOrder is "valid".
 	if o.Status != StatusValid {
-		return nil, "", &OrderError{OrderURL: o.URI, Status: o.Status}
+		return nil, "", &OrderError{OrderURL: o.URI, Status: o.Status, Problem: o.Error}
 	}
 	crt, err := c.fetchCertRFC(ctx, o.CertURL, bundle)
 	return crt, o.CertURL, err
