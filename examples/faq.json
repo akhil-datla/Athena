@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "answer": "Go to Settings > Security > Reset Password and follow the prompts."
+  },
+  {
+    "question": "What are your business hours?",
+    "answer": "We are open Monday to Friday from 9am to 5pm EST."
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "Email support@example.com or call 1-800-555-HELP during business hours."
+  },
+  {
+    "question": "Where can I track my order?",
+    "answer": "Visit orders.example.com and enter your order number to see real-time tracking."
+  },
+  {
+    "question": "How do I cancel my subscription?",
+    "answer": "Go to Settings > Billing > Cancel Subscription. Your access continues until the end of the billing period."
+  }
+]
